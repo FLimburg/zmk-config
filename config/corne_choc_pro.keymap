@@ -16,11 +16,11 @@
 
 / {
     macros {
-        mae: ae {
+        mae: mae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SINGLE_QUOTE) &kp A>;
-            label = "AE";
+            label = "MAE";
         };
 
         moe: moe {
@@ -37,21 +37,21 @@
             label = "MUE";
         };
 
-        mae_s: mAE {
+        mae_s: mae_s {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SINGLE_QUOTE) &kp LS(A)>;
             label = "MAE";
         };
 
-        mue_s: mUE {
+        mue_s: mue_s {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SINGLE_QUOTE) &kp LS(U)>;
             label = "MUE";
         };
 
-        moe_s: mOE {
+        moe_s: moe_s {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SINGLE_QUOTE) &kp LS(O)>;
