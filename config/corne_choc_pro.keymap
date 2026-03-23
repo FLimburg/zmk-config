@@ -37,21 +37,21 @@
             label = "MUE";
         };
 
-        mAE: mAE {
+        mae_s: mAE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SINGLE_QUOTE) &kp LS(A)>;
             label = "MAE";
         };
 
-        mUE: mUE {
+        mue_s: mUE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SINGLE_QUOTE) &kp LS(U)>;
             label = "MUE";
         };
 
-        mOE: mOE {
+        moe_s: mOE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SINGLE_QUOTE) &kp LS(O)>;
@@ -60,9 +60,9 @@
     };
 
     behaviors {
-        ae: ae {
+        ttae: ttae {
             compatible = "zmk,behavior-tap-dance";
-            label = "AE";
+            label = "TTAE";
             #binding-cells = <0>;
             bindings = <&kp A>, <&mae>;
         };
@@ -95,18 +95,16 @@
             quick-tap-ms = <175>;
         };
 
-        oe: oe {
+        ttoe: ttoe {
             compatible = "zmk,behavior-tap-dance";
-            label = "OE";
+            label = "TTOE";
             #binding-cells = <0>;
             bindings = <&kp O>, <&moe>;
-
-            tapping-term-ms = <150>;
         };
 
-        ue: ue {
+        ttue: ttue {
             compatible = "zmk,behavior-tap-dance";
-            label = "UE";
+            label = "TTUE";
             #binding-cells = <0>;
             bindings = <&kp U>, <&mue>;
         };
@@ -149,33 +147,33 @@
     combos {
         compatible = "zmk,combos";
 
-        ae {
+        cae {
             bindings = <&mae>;
             key-positions = <15 3>;
         };
 
-        UE {
-            bindings = <&mUE>;
+        cue_s {
+            bindings = <&mue_s>;
             key-positions = <3 9 26>;
         };
 
-        AE {
-            bindings = <&mAE>;
+        cae_s {
+            bindings = <&mae_s>;
             key-positions = <15 3 26>;
         };
 
-        ue {
+        cue {
             bindings = <&mue>;
             key-positions = <3 9>;
         };
 
-        oe {
+        coe {
             bindings = <&moe>;
             key-positions = <3 11>;
         };
 
-        OE {
-            bindings = <&mOE>;
+        coe_s {
+            bindings = <&moe_s>;
             key-positions = <3 26 11>;
         };
     };
