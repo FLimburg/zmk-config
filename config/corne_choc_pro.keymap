@@ -155,6 +155,11 @@
             bindings = <&moe_s>;
             key-positions = <3 26 11>;
         };
+
+        space2enter {
+            bindings = <&kp ENTER>;
+            key-positions = <42 43>;
+        };
     };
 
     keymap {
