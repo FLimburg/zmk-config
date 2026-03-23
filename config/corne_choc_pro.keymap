@@ -41,21 +41,21 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SINGLE_QUOTE) &kp LS(A)>;
-            label = "MAE";
+            label = "MAES";
         };
 
         mue_s: mue_s {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SINGLE_QUOTE) &kp LS(U)>;
-            label = "MUE";
+            label = "MUES";
         };
 
         moe_s: moe_s {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(SINGLE_QUOTE) &kp LS(O)>;
-            label = "MOE";
+            label = "MOES";
         };
     };
 
