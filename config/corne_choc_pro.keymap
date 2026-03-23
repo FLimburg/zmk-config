@@ -36,6 +36,27 @@
             bindings = <&kp LS(SINGLE_QUOTE) &kp U>;
             label = "MUE";
         };
+
+        mAE: mAE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SINGLE_QUOTE) &kp LS(A)>;
+            label = "MAE";
+        };
+
+        mUE: mUE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SINGLE_QUOTE) &kp LS(U)>;
+            label = "MUE";
+        };
+
+        mOE: mOE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SINGLE_QUOTE) &kp LS(O)>;
+            label = "MOE";
+        };
     };
 
     behaviors {
@@ -78,7 +99,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "OE";
             #binding-cells = <0>;
-            bindings = <&kp A>, <&moe>;
+            bindings = <&kp O>, <&moe>;
+
+            tapping-term-ms = <150>;
         };
 
         ue: ue {
@@ -96,6 +119,33 @@
 
             tapping-term-ms = <100>;
         };
+
+        tt3: tt3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TT3";
+            #binding-cells = <0>;
+            bindings = <&mo 3>, <&tog 3>;
+
+            tapping-term-ms = <100>;
+        };
+
+        tt2: tt2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TT2";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&tog 2>;
+
+            tapping-term-ms = <100>;
+        };
+
+        tt1: tt1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TT1";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&tog 1>;
+
+            tapping-term-ms = <100>;
+        };
     };
 
     combos {
@@ -104,6 +154,11 @@
         ae {
             bindings = <&mae>;
             key-positions = <15 3>;
+        };
+
+        UE {
+            bindings = <&mUE>;
+            key-positions = <3 9 26>;
         };
     };
 
@@ -120,7 +175,7 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC    &kp Q              &kp W                &kp E            &kp R            &kp T      &kp C_MUTE  &kp C_PLAY_PAUSE  &kp Z      &kp U             &kp I            &kp O                 &kp P             &kp BSPC
+&kp ESC    &kp Q              &kp W                &kp E            &kp R            &kp T      &kp C_MUTE  &kp C_PLAY_PAUSE  &kp Z      &kp U             &kp I            &oe                   &kp P             &kp BSPC
 &kp TAB    &mtl LEFT_SHIFT A  &mtl LEFT_CONTROL S  &mtl LEFT_ALT D  &mtl LEFT_GUI F  &kp G      &tt4        &mo 3             &kp H      &mtr RIGHT_GUI J  &mt RIGHT_ALT K  &mtr RIGHT_CONTROL L  &mtr RSHIFT SEMI  &kp SQT
 &kp EQUAL  &kp Y              &kp X                &kp C            &kp V            &kp B                                    &kp N      &kp M             &kp COMMA        &kp DOT               &kp FSLH          &kp MINUS
                                                    &mo 2            &mo 1            &kp SPACE                                &kp SPACE  &mo 1             &mo 2
